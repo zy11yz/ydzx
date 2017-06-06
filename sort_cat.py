@@ -5,9 +5,9 @@ def find_item(list_, item):
     return [index for index, m in enumerate(list_) if m == item]
 
 model = gensim.models.Word2Vec.load('/data/home/lidong1/training/channel_model.model')
-with open('/data/home/lidong1/training/channel.txt', 'r', encoding='utf-8') as channel:
+with open('/data/home/lidong1/training/channel_test.txt', 'r', encoding='utf-8') as channel:
     channel_list = [i.strip('\n') for i in channel.readlines()]
-cat_list = ['美食','社会','休闲','健康','旅行','教育','体育','科技','军事','财经','时尚','科学','旅游','房产','育儿','动漫','情感','两性','互联网','人文','汽车','民生','文化','科技数码','传媒','运势','家居','娱乐','游戏','时政','历史','宗教','职场','公益','国际','移民','星座','彩票']
+cat_list = ['体育', '健康', '其他', '人文', '科技数码', '家居', '星座', '时尚', '时政', '社会', '两性', '美食', '旅行', '教育', '育儿', '财经', '娱乐', '汽车', '游戏', '职场', '休闲', '房产', '军事', '互联网', '科学探索', '娱乐', '科技', '旅游', '文化', '历史', '动漫', '传媒', '科学', '国际', '民生', '宗教', '彩票', '运势', '公益', '情感', '移民', '美女', '搞笑']
 
 match = []
 for channel in channel_list:
